@@ -6,15 +6,15 @@
 /* Layout: én smal mobilkolonne — logoer, overskrift, to store "følg"-kort, kontaktlinje */
 :root{
   --ground:#F4F1EA; --surface:#FFFFFF; --ink:#1A1A1A; --muted:#6B6B6B; --line:#E4DECE;
-  --accent:#E87D30; --accent-ink:#E87D30; --accent-soft:#FBE8D6; --btn-ink:#1A1A1A; --btn-text:#FFFFFF;
+  --accent:#E87D30; --accent-ink:#E87D30; --accent-soft:#E87D30; --btn-ink:#1A1A1A; --btn-text:#FFFFFF;
   --display:"Archivo","Arial Black",system-ui,sans-serif; --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --ground:#0B0B0B; --surface:#171310; --ink:#F2EEE7; --muted:#A79E90; --line:#2E2820;
-  --accent:#E87D30; --accent-ink:#E87D30; --accent-soft:#2E1B0C; --btn-ink:#E87D30; --btn-text:#0B0B0B; color-scheme:dark}}
+  --accent:#E87D30; --accent-ink:#E87D30; --accent-soft:#E87D30; --btn-ink:#E87D30; --btn-text:#0B0B0B; color-scheme:dark}}
 :root[data-theme="dark"]{
   --ground:#0B0B0B; --surface:#171310; --ink:#F2EEE7; --muted:#A79E90; --line:#2E2820;
-  --accent:#E87D30; --accent-ink:#E87D30; --accent-soft:#2E1B0C; --btn-ink:#E87D30; --btn-text:#0B0B0B; color-scheme:dark}
+  --accent:#E87D30; --accent-ink:#E87D30; --accent-soft:#E87D30; --btn-ink:#E87D30; --btn-text:#0B0B0B; color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 40px}
@@ -31,7 +31,7 @@ h1 .x{color:var(--accent)}
 .card{display:grid;grid-template-columns:52px 1fr;grid-template-areas:"mark meta" "btn btn";gap:14px 14px;align-items:center;
   background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px}
 .mark{grid-area:mark;width:52px;height:52px;border-radius:14px;display:grid;place-items:center;
-  font-family:var(--display);font-weight:900;font-size:22px;color:var(--accent);background:var(--accent-soft)}
+  font-family:var(--display);font-weight:900;font-size:24px;color:#1A1A1A;background:var(--accent-soft)}
 .meta{grid-area:meta;min-width:0}
 .meta b{display:block;font-family:var(--display);font-weight:800;font-size:19px}
 .meta span{color:var(--muted);font-size:14px}
