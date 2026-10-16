@@ -5,16 +5,18 @@
 <style>
 /* Layout: én smal mobilkolonne — logoer, overskrift, to store "følg"-kort, kontaktlinje */
 :root{
+  --brand:#E5722A;
   --ground:#F4F1EA; --surface:#FFFFFF; --ink:#1A1A1A; --muted:#6B6B6B; --line:#E4DECE;
-  --accent:#E87D30; --accent-ink:#E87D30; --accent-soft:#E87D30; --btn-ink:#1A1A1A; --btn-text:#FFFFFF;
+  --accent:var(--brand); --accent-ink:var(--brand); --accent-soft:var(--brand); --btn-ink:#1A1A1A; --btn-text:#FFFFFF;
   --display:"Archivo","Arial Black",system-ui,sans-serif; --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --ground:#0B0B0B; --surface:#171310; --ink:#F2EEE7; --muted:#A79E90; --line:#2E2820;
-  --accent:#E87D30; --accent-ink:#E87D30; --accent-soft:#E87D30; --btn-ink:#E87D30; --btn-text:#0B0B0B; color-scheme:dark}}
+  --accent:var(--brand); --accent-ink:var(--brand); --accent-soft:var(--brand); --btn-ink:var(--brand); --btn-text:#0B0B0B; color-scheme:dark}}
 :root[data-theme="dark"]{
   --ground:#0B0B0B; --surface:#171310; --ink:#F2EEE7; --muted:#A79E90; --line:#2E2820;
-  --accent:#E87D30; --accent-ink:#E87D30; --accent-soft:#E87D30; --btn-ink:#E87D30; --btn-text:#0B0B0B; color-scheme:dark}
+  --accent:var(--brand); --accent-ink:var(--brand); --accent-soft:var(--brand); --btn-ink:var(--brand); --btn-text:#0B0B0B; color-scheme:dark}
+@supports (color: color(display-p3 1 1 1)){:root{--brand:color(display-p3 0.898 0.447 0.165)}}
 *{box-sizing:border-box}
 body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 40px}
